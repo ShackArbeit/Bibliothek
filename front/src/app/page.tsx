@@ -1,103 +1,35 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        藍委徐巧芯15日舉辦政策說明會，邀請前立委郭正亮、美麗島電子報董事長吳子嘉助講，吳子嘉發言時批評台積電董事長魏哲家「醜胖子」，而徐巧芯、郭正亮等人卻在一旁大笑。對此，徐巧芯今（16日）回應，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮；至於說明會上的大禮包手提袋遭疑違反選罷法，徐巧芯也說，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+徐巧芯15日舉辦政策說明會，並邀請郭正亮、吳子嘉到場助講。吳子嘉說，自己有天睡覺起來，台積電突然被賣掉了，「台積電離開台灣，我們不知道啊。我在睡覺的時候，突然間長得很醜的那個醜胖子，那個叫什麼名字？」他並轉過頭求助郭正亮，郭則說「我不要說」，吳隨後想到是魏哲家，竟稱「魏哲家比我醜嘛，醜胖子」，沒想到郭正亮與徐巧芯卻在一旁大笑。
+
+對此，徐巧芯今（16日）表示，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮，「子非魚，焉知魚之樂？」
+
+至於政治評論員吳靜怡說，據鄉民開箱說明會的大禮包手提袋，內有包餡麵包、麥香紅茶、兩包衛生紙、一張文宣、一個手機大小的行動電風扇，質疑「徐巧芯身為被罷免人，為什麼可以大踩選罷法餽贈小物的規定？」徐巧芯回應，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+藍委徐巧芯15日舉辦政策說明會，邀請前立委郭正亮、美麗島電子報董事長吳子嘉助講，吳子嘉發言時批評台積電董事長魏哲家「醜胖子」，而徐巧芯、郭正亮等人卻在一旁大笑。對此，徐巧芯今（16日）回應，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮；至於說明會上的大禮包手提袋遭疑違反選罷法，徐巧芯也說，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+
+徐巧芯15日舉辦政策說明會，並邀請郭正亮、吳子嘉到場助講。吳子嘉說，自己有天睡覺起來，台積電突然被賣掉了，「台積電離開台灣，我們不知道啊。我在睡覺的時候，突然間長得很醜的那個醜胖子，那個叫什麼名字？」他並轉過頭求助郭正亮，郭則說「我不要說」，吳隨後想到是魏哲家，竟稱「魏哲家比我醜嘛，醜胖子」，沒想到郭正亮與徐巧芯卻在一旁大笑。
+
+對此，徐巧芯今（16日）表示，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮，「子非魚，焉知魚之樂？」
+
+至於政治評論員吳靜怡說，據鄉民開箱說明會的大禮包手提袋，內有包餡麵包、麥香紅茶、兩包衛生紙、一張文宣、一個手機大小的行動電風扇，質疑「徐巧芯身為被罷免人，為什麼可以大踩選罷法餽贈小物的規定？」徐巧芯回應，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+藍委徐巧芯15日舉辦政策說明會，邀請前立委郭正亮、美麗島電子報董事長吳子嘉助講，吳子嘉發言時批評台積電董事長魏哲家「醜胖子」，而徐巧芯、郭正亮等人卻在一旁大笑。對此，徐巧芯今（16日）回應，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮；至於說明會上的大禮包手提袋遭疑違反選罷法，徐巧芯也說，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+
+徐巧芯15日舉辦政策說明會，並邀請郭正亮、吳子嘉到場助講。吳子嘉說，自己有天睡覺起來，台積電突然被賣掉了，「台積電離開台灣，我們不知道啊。我在睡覺的時候，突然間長得很醜的那個醜胖子，那個叫什麼名字？」他並轉過頭求助郭正亮，郭則說「我不要說」，吳隨後想到是魏哲家，竟稱「魏哲家比我醜嘛，醜胖子」，沒想到郭正亮與徐巧芯卻在一旁大笑。
+
+對此，徐巧芯今（16日）表示，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮，「子非魚，焉知魚之樂？」
+
+至於政治評論員吳靜怡說，據鄉民開箱說明會的大禮包手提袋，內有包餡麵包、麥香紅茶、兩包衛生紙、一張文宣、一個手機大小的行動電風扇，質疑「徐巧芯身為被罷免人，為什麼可以大踩選罷法餽贈小物的規定？」徐巧芯回應，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+藍委徐巧芯15日舉辦政策說明會，邀請前立委郭正亮、美麗島電子報董事長吳子嘉助講，吳子嘉發言時批評台積電董事長魏哲家「醜胖子」，而徐巧芯、郭正亮等人卻在一旁大笑。對此，徐巧芯今（16日）回應，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮；至於說明會上的大禮包手提袋遭疑違反選罷法，徐巧芯也說，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
+
+徐巧芯15日舉辦政策說明會，並邀請郭正亮、吳子嘉到場助講。吳子嘉說，自己有天睡覺起來，台積電突然被賣掉了，「台積電離開台灣，我們不知道啊。我在睡覺的時候，突然間長得很醜的那個醜胖子，那個叫什麼名字？」他並轉過頭求助郭正亮，郭則說「我不要說」，吳隨後想到是魏哲家，竟稱「魏哲家比我醜嘛，醜胖子」，沒想到郭正亮與徐巧芯卻在一旁大笑。
+
+對此，徐巧芯今（16日）表示，自己是在笑吳子嘉董事長怎麼這樣形容人，拿來大做文章的人不過是挑撥離間、借題發揮，「子非魚，焉知魚之樂？」
+
+至於政治評論員吳靜怡說，據鄉民開箱說明會的大禮包手提袋，內有包餡麵包、麥香紅茶、兩包衛生紙、一張文宣、一個手機大小的行動電風扇，質疑「徐巧芯身為被罷免人，為什麼可以大踩選罷法餽贈小物的規定？」徐巧芯回應，「小物從中國進口很便宜，均在合法範圍內，有疑慮歡迎檢舉，絕對經得起檢驗。」
     </div>
   );
 }
