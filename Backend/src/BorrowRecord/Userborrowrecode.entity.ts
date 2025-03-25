@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
+import { Entity, PrimaryColumn, Column, ManyToOne ,JoinColumn } from 'typeorm';
 import { Books } from 'src/Books/books.entity';
 import { Members } from 'src/Member/member.entity';
 import { ObjectType, Field, Int } from "@nestjs/graphql";
@@ -6,10 +6,9 @@ import { ObjectType, Field, Int } from "@nestjs/graphql";
 @ObjectType()
 @Entity()
 export class UserBorrowRecords{
-
-    @Field(()=>Int)
-    @PrimaryGeneratedColumn()
-    user_borrow_id:number
+    @Field(() => Int)
+    @PrimaryColumn()
+    member_id: number;
 
     @Field()
     @Column({type:'timestamp',default:()=>'CURRENT_TIMESTAMP'})

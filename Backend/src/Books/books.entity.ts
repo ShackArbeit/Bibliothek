@@ -1,4 +1,4 @@
-import { Entity,Column,PrimaryGeneratedColumn,ManyToOne,JoinColumn } from "typeorm";
+import { Entity,Column,PrimaryColumn,ManyToOne,JoinColumn } from "typeorm";
 import { Publisher } from "src/Publisher/publisher.entity";
 import { ObjectType, Field, Int } from "@nestjs/graphql";
 
@@ -6,7 +6,7 @@ import { ObjectType, Field, Int } from "@nestjs/graphql";
 @Entity()
 export class Books{
     @Field(() => Int) 
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     book_id:number
 
     @Field()

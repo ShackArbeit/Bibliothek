@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Publisher {
+  pub_id: Int!
+  pub_name: String!
+  pub_address: String!
+  books: [Books!]!
+}
+
+type Books {
+  book_id: Int!
+  book_title: String!
+  publisher: Publisher!
+  book_author: String!
+  pub_date: DateTime!
+  human_like: Int!
+  remark: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type UserBorrowRecords {
+  member_id: Int!
+  user_borrow_at: DateTime!
+  which_book: Books!
+  borrower: Members!
+}
+
+type Members {
+  member_id: Int!
+  member_name: String!
+  member_password: String!
+  member_email: String!
+  sign_up_date: DateTime!
+  borrow_records: [UserBorrowRecords!]!
+}
+
+type Query {
+  searchBooks(query: String!): [Books!]!
+}
