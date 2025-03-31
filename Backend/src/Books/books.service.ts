@@ -19,7 +19,7 @@ export class BookService{
           });
         const pubIds=publishers.map((publisher)=>publisher.pub_id);
         const queryBuilder=this.booksRepository.createQueryBuilder('book')
-                           .leftJoin('book.publisher', 'publisher')
+                           .leftJoinAndSelect('book.publisher', 'publisher')   
                            .where('book.book_title LIKE :query', { query: `%${query}%` })
                            .orWhere('book.book_author LIKE :query', { query: `%${query}%` })
         // const whereConditions:any[]=[
@@ -33,9 +33,9 @@ export class BookService{
         //     where: whereConditions,
         //     relations: ["publisher"],
         // })
-        if(pubIds.length>0){
-            queryBuilder.orWhere('book.publisher IN (:...pubIds)', { pubIds })
-        }
+        if (pubIds.length > 0) {
+           queryBuilder.orWhere('publisher.pub_id IN (:...pubIds)', { pubIds });
+      }
         return queryBuilder.getMany()
     } 
 }

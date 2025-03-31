@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Books } from 'src/Books/books.entity';
 import { Publisher } from 'src/Publisher/publisher.entity';
-import { Members } from 'src/Member/member.entity';
+import { Members } from 'src/Member/members.entity';
 import { UserBorrowRecords } from 'src/BorrowRecord/Userborrowrecode.entity';
 
 @Module({

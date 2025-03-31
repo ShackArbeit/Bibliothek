@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { UserBorrowRecords } from 'src/BorrowRecord/Userborrowrecode.entity';
 import { ObjectType, Field, Int } from "@nestjs/graphql";
+import * as bcrypt from 'bcrypt'
 
 @ObjectType()
 @Entity()
@@ -28,4 +29,11 @@ export class Members{
     @Field(()=>[UserBorrowRecords])
     @OneToMany(()=>UserBorrowRecords, (borrow_record)=>borrow_record.borrower)
     borrow_records:UserBorrowRecords[]
+
+    async hashPassword(){
+        this.member_password=await bcrypt.hash(this.member_password,10)
+    }
+    async comparePassword(password:string):Promise<boolean>{
+        return bcrypt.compare(password,this.member_password)
+    }
 }

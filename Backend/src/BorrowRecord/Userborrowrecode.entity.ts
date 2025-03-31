@@ -1,6 +1,6 @@
 import { Entity, PrimaryColumn, Column, ManyToOne ,JoinColumn } from 'typeorm';
 import { Books } from 'src/Books/books.entity';
-import { Members } from 'src/Member/member.entity';
+import { Members } from 'src/Member/members.entity';
 import { ObjectType, Field, Int } from "@nestjs/graphql";
 
 @ObjectType()
