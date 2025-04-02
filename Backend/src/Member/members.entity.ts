@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { UserBorrowRecords } from 'src/BorrowRecord/Userborrowrecode.entity';
 import { ObjectType, Field, Int } from "@nestjs/graphql";
+import { BooksLikes } from 'src/BooksLike/booksLike.entity';
 import * as bcrypt from 'bcrypt'
 
 @ObjectType()
@@ -29,6 +30,11 @@ export class Members{
     @Field(()=>[UserBorrowRecords])
     @OneToMany(()=>UserBorrowRecords, (borrow_record)=>borrow_record.borrower)
     borrow_records:UserBorrowRecords[]
+
+
+    @Field(() => [BooksLikes])
+    @OneToMany(() => BooksLikes, (bookLike) => bookLike.member)
+    liked_books: BooksLikes[];
 
     async hashPassword(){
         this.member_password=await bcrypt.hash(this.member_password,10)

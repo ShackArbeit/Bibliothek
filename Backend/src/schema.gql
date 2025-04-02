@@ -9,20 +9,11 @@ type Publisher {
   books: [Books!]!
 }
 
-type Books {
-  book_id: Int!
-  book_title: String!
-  publisher: Publisher!
-  book_author: String!
-  pub_date: DateTime!
-  human_like: Int!
-  remark: String!
+type BooksCategroy {
+  categroy_id: Int!
+  category_name: String!
+  books: [Books!]!
 }
-
-"""
-A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
-"""
-scalar DateTime
 
 type UserBorrowRecords {
   member_id: Int!
@@ -31,6 +22,11 @@ type UserBorrowRecords {
   borrower: Members!
 }
 
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
 type Members {
   member_id: Int!
   member_name: String!
@@ -38,6 +34,25 @@ type Members {
   member_email: String!
   sign_up_date: DateTime!
   borrow_records: [UserBorrowRecords!]!
+  liked_books: [BooksLikes!]!
+}
+
+type BooksLikes {
+  like_id: Int!
+  member: Members!
+  book: Books!
+}
+
+type Books {
+  book_id: Int!
+  book_title: String!
+  publisher: Publisher!
+  category: BooksCategroy!
+  book_author: String!
+  pub_date: DateTime!
+  human_like: Int!
+  liked_by_users: [BooksLikes!]!
+  explain: String!
 }
 
 type Query {

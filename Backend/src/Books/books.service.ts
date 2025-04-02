@@ -4,13 +4,17 @@ import { Like} from "typeorm";
 import { Repository } from "typeorm";
 import { Books} from "./books.entity";
 import { Publisher } from "src/Publisher/publisher.entity";
+import { Members } from "src/Member/members.entity";
+import { BooksLikes } from "src/BooksLike/booksLike.entity";
 
 @Injectable()
 export class BookService{
     constructor
     (
       @InjectRepository(Books) private booksRepository:Repository<Books>,
-      @InjectRepository(Publisher) private publisherRepository:Repository<Publisher>
+      @InjectRepository(Publisher) private publisherRepository:Repository<Publisher>,
+      @InjectRepository(Members) private memberRepository:Repository<Members>,
+      @InjectRepository(BooksLikes) private booksLikeRepository:Repository<BooksLikes>
     ){
     }
     async searchBooks(query: string): Promise<Books[]>{
