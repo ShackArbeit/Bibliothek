@@ -18,5 +18,6 @@ export class BooksLikes{
 
     @Field(()=>Books)
     @ManyToOne(()=>Books,(book)=>book.liked_by_users,{ onDelete: 'CASCADE' })
+    @JoinColumn({name:'book_id'})
     book:Books
 }

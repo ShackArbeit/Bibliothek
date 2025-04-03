@@ -16,7 +16,7 @@ type BooksCategroy {
 }
 
 type UserBorrowRecords {
-  member_id: Int!
+  borrow_id: Int!
   user_borrow_at: DateTime!
   which_book: Books!
   borrower: Members!

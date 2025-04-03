@@ -5,8 +5,11 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { DatabaseModule } from './Database/database.module';
-import { BooksResolver } from './Books/books.resolver';
-import { BookService } from './Books/books.service';
+import { BooksModule } from './Module/books.module';
+import { BooksLikeModule } from './Module/booksLike.module';
+import { BooksCategoryModule } from './Module/booksCategory.module';
+import { MembersModule } from './Module/members.module';
+import { BorrowRecordModule } from './Module/BorrowRecord.module';
 
 @Module({
   imports: [
@@ -15,8 +18,13 @@ import { BookService } from './Books/books.service';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     }),
     DatabaseModule,
+    BooksModule,
+    BooksLikeModule,
+    BooksCategoryModule,
+    MembersModule,
+    BooksCategoryModule
   ],
   controllers: [AppController],
-  providers: [AppService,BooksResolver,BookService],
+  providers: [AppService],
 })
 export class AppModule {}

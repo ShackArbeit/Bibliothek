@@ -26,7 +26,7 @@ import { BooksLikes } from 'src/BooksLike/booksLike.entity';
       ],
       synchronize: true,
     }),
-    TypeOrmModule.forFeature([Books, Publisher, Members, UserBorrowRecords,BooksLikes]),
+    TypeOrmModule.forFeature([Books, Publisher, Members, UserBorrowRecords,BooksLikes,BooksCategroy]),
   ],
   exports: [TypeOrmModule], 
 })

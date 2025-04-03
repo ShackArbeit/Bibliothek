@@ -5,7 +5,7 @@ import { Books } from "src/Books/books.entity";
 import { UserBorrowRecords } from "./Userborrowrecode.entity";
 
 @Injectable()
-export class UserBarrowRecordService {
+export class UserBorrowRecordService {
     constructor(
         @InjectRepository(UserBorrowRecords) 
         private userBorrowRepository: Repository<UserBorrowRecords>,
