@@ -13,8 +13,6 @@ export class BookService{
     (
       @InjectRepository(Books) private booksRepository:Repository<Books>,
       @InjectRepository(Publisher) private publisherRepository:Repository<Publisher>,
-      @InjectRepository(Members) private memberRepository:Repository<Members>,
-      @InjectRepository(BooksLikes) private booksLikeRepository:Repository<BooksLikes>
     ){
     }
     async searchBooks(query: string): Promise<Books[]>{

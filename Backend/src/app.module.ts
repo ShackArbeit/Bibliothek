@@ -10,6 +10,7 @@ import { BooksLikeModule } from './Module/booksLike.module';
 import { BooksCategoryModule } from './Module/booksCategory.module';
 import { MembersModule } from './Module/members.module';
 import { BorrowRecordModule } from './Module/BorrowRecord.module';
+import { PublisherModule } from './Module/publisher.module';
 
 @Module({
   imports: [
@@ -22,7 +23,9 @@ import { BorrowRecordModule } from './Module/BorrowRecord.module';
     BooksLikeModule,
     BooksCategoryModule,
     MembersModule,
-    BooksCategoryModule
+    BooksCategoryModule,
+    BorrowRecordModule,
+    PublisherModule
   ],
   controllers: [AppController],
   providers: [AppService],

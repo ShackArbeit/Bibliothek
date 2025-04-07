@@ -1,5 +1,5 @@
 import { Resolver, Query, Args, ResolveField, Parent } from "@nestjs/graphql";
-import { UserBarrowRecordService } from "./Userborrowrecode.service";
+import { UserBorrowRecordService } from "./Userborrowrecode.service";
 import { UserBorrowRecords } from "./Userborrowrecode.entity";
 import { Books } from "src/Books/books.entity";
 import { Members } from "src/Member/members.entity";
@@ -9,7 +9,7 @@ import { Repository } from "typeorm";
 @Resolver(() => UserBorrowRecords)
 export class UserBorrowRecordsResolver {
     constructor(
-        private readonly userBorrowService: UserBarrowRecordService,
+        private readonly userBorrowService: UserBorrowRecordService ,
         @InjectRepository(Books) private booksRepository: Repository<Books>,
         @InjectRepository(Members) private membersRepository: Repository<Members>,
     ) {}

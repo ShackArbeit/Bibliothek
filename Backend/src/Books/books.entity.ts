@@ -42,6 +42,6 @@ export class Books{
     liked_by_users:  BooksLikes[];
 
     @Field()
-    @Column({ nullable: true })
+    @Column({type:'mediumtext',nullable: true })
     explain: string;
 }

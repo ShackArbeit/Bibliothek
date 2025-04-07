@@ -57,4 +57,17 @@ type Books {
 
 type Query {
   searchBooks(query: String!): [Books!]!
+  getAllPublisherInformation(query: String!): [Publisher!]!
+  getUserLikedBooks(memberId: Float!): [Books!]!
+  searchByCategory(query: String!): [Books!]!
+  findOneUserBorrowAllRecords(memberId: Float!): [UserBorrowRecords!]!
+  findOneBookBorrowedByAllUsers(bookId: Float!): [UserBorrowRecords!]!
+}
+
+type Mutation {
+  register(member_name: String!, member_email: String!, member_password: String!): Members!
+  login(identifier: String!, password: String!): String!
+  resetPassord(member_email: String!, newPassword: String!): Boolean!
+  likeBook(memberId: Float!, bookId: Float!): BooksLikes!
+  unlikeBook(memberId: Float!, bookId: Float!): String!
 }
